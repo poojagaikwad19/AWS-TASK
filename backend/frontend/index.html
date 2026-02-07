@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #2c3e50;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 70%;
+      padding: 10px;
+      margin-right: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .delete-btn {
+      background: #e74c3c;
+    }
+    .delete-btn:hover {
+      background: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div>🚀 DevOps App</div>
+    <div>
+      <a href="/register.html">Register</a>
+      <a href="/login.html">Login</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>User Management</h1>
+
+    <div style="margin-bottom: 20px;">
+      <input type="text" id="name" placeholder="Enter name" />
+      <button onclick="addUser()">Add</button>
+    </div>
+
+    <ul id="userList"></ul>
+  </div>
+
+  <script>
+    const API_URL = "http://localhost:3000";
+
+    async function addUser() {
+      const name = document.getElementById("name").value;
+      if (!name) return alert("Enter a name");
+
+      await fetch(API_URL + "/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name })
+      });
+
+      document.getElementById("name").value = "";
+      loadUsers();
+    }
+
+    async function deleteUser(id) {
+      await fetch(API_URL + "/users/" + id, {
+        method: "DELETE"
+      });
+      loadUsers();
+    }
+
+    async function loadUsers() {
+      const res = await fetch(API_URL + "/users");
+      const users = await res.json();
+      const list = document.getElementById("userList");
+      list.innerHTML = "";
+
+      users.forEach(u => {
+        const li = document.createElement("li");
+        li.innerText = u.name;
+
+        const btn = document.createElement("button");
+        btn.innerText = "Delete";
+        btn.className = "delete-btn";
+        btn.onclick = () => deleteUser(u._id);
+
+        li.appendChild(btn);
+        list.appendChild(li);
+      });
+    }
+
+    loadUsers();
+  </script>
+</body>
+</html>
