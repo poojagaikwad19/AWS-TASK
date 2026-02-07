@@ -1,5 +1,5 @@
 # AWS DevOps Intern Assignment – Full Stack App Deployment
-## This is the Live Link Of project##
+## This is the Live Link Of project
 http://16.171.150.107:3000/register.html
 
 ## Application Setup
