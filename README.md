@@ -86,7 +86,6 @@ aws-devops-assignment/
 
 ![Simple Frontend Working](https://raw.githubusercontent.com/poojagaikwad19/Aws-Devops-Assigment/master/Screenshot/simple-frontend-working.png.jpeg)ection-error.png.jpeg)
 
-![Simple Frontend Working](https://raw.githubusercontent.com/poojagaikwad19/Aws-Devops-Assigment/main/screenshots/simple-frontend-working.png.jpeg)
 
 ## Conclusion
 This project successfully demonstrates the implementation of a simple application using Docker and AWS services. It covers application development, database integration, containerization, cloud deployment, load balancing, auto scaling, and cost optimization. The assignment helped in gaining hands-on experience with AWS and DevOps fundamentals.
