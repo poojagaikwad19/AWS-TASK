@@ -84,7 +84,7 @@ aws-devops-assignment/
 
 ![Mongo Connection Error](https://raw.githubusercontent.com/poojagaikwad19/Aws-Devops-Assigment/master/Screenshot/mongo-connection-error.png.jpeg)
 
-![Simple Frontend Working](https://raw.githubusercontent.com/poojagaikwad19/Aws-Devops-Assigment/master/Screenshot/simple-frontend-working.png.jpeg)ection-error.png.jpeg)
+![Simple Frontend Working](https://raw.githubusercontent.com/poojagaikwad19/Aws-Devops-Assigment/master/Screenshot/simple-frontend-working.png.jpeg)
 
 
 ## Conclusion
