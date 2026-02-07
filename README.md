@@ -2,32 +2,44 @@
 ## This is the Live Link Of project##
 http://16.171.150.107:3000/register.html
 
-## 👋 Overview
+## Application Setup
+1. Developed a simple frontend application  
+2. Created backend services  
+3. Integrated database for data storage  
+4. Connected application with the database  
 
-This project is a simple full-stack web application created as part of the AWS & DevOps Intern assignment.
+## Docker Implementation
+1. Created Dockerfile(s) for the application  
+2. Built Docker images  
+3. Ran application using Docker containers  
+4. Exposed required ports  
+5. Enabled container auto-restart  
 
-The application includes:
-- Frontend (HTML, CSS, JavaScript)
-- Backend (Node.js + Express)
-- Database (MongoDB)
-- Docker for containerization
-- Deployment on AWS EC2
+## AWS Deployment
+1. Launched AWS EC2 instance (Free Tier)  
+2. Installed Docker on EC2  
+3. Deployed Docker containers on EC2  
+4. Configured Security Groups for access  
+5. Accessed application using EC2 Public IP  
 
-The main goal is to show the complete DevOps flow:
-Build the app → Dockerize it → Run locally → Deploy on AWS → Access via public IP → Troubleshoot issues.
+## Load Balancer & Auto Scaling
+1. Configured Application Load Balancer (ALB)  
+2. Created Target Group  
+3. Attached Auto Scaling Group (ASG)  
+4. Enabled scaling based on CPU utilization  
 
----
+## Cost Optimization
+1. Used free-tier eligible instances  
+2. Allocated minimal resources  
+3. Used Auto Scaling to avoid over-provisioning  
 
-## 🛠️ Tech Stack
-
-- Frontend: HTML, CSS, JavaScript  
-- Backend: Node.js, Express  
+## Tools & Technologies
+- Frontend: HTML / CSS / JavaScript  
+- Backend: Node.js   
 - Database: MongoDB  
-- Containerization: Docker, Docker Compose  
-- Cloud: AWS EC2 (t2.micro / t3.micro)  
-- OS: Ubuntu (on EC2)
+- Docker  
+- AWS EC2, ALB, Auto Scaling Group
 
----
 
 ## 📦 Features
 
